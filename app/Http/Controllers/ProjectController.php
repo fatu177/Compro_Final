@@ -2,19 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Education;
+use App\Models\Project;
 use Illuminate\Http\Request;
 
-class EducationController extends Controller
+class ProjectController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $datas = Education::all()->sortByDesc('start_date');
+        $datas = Project::all()->sortByDesc('start_date');
 
-        return view('education.index', compact('datas'));
+        return view('project.index', compact('datas'));
     }
 
     /**
@@ -22,8 +22,8 @@ class EducationController extends Controller
      */
     public function create()
     {
-        $title = "Tambah Pendidikan";
-        return view('education.create', compact('title'));
+        $title = "Tambah Pengalaman";
+        return view('project.create', compact('title'));
     }
 
     /**
@@ -32,21 +32,21 @@ class EducationController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'school_name' => 'required',
-            'degree' => 'required',
-            'field_of_study' => 'required',
+
+            'name' => 'required',
+
             'start_date' => 'required',
             'end_date' => 'required',
             'description' => 'required',
         ]);
-        Education::create($request->all());
-        return redirect()->route('education.index');
+        Project::create($request->all());
+        return redirect()->route('project.index');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Education $education)
+    public function show(Project $Project)
     {
         //
     }
@@ -56,9 +56,9 @@ class EducationController extends Controller
      */
     public function edit(string $id)
     {
-        $title = "Edit Pendidikan";
-        $edit = Education::find($id);
-        return view('education.edit', compact('title', 'edit'));
+        $title = "Edit Project";
+        $edit = Project::find($id);
+        return view('project.edit', compact('title', 'edit'));
     }
 
     /**
@@ -67,16 +67,15 @@ class EducationController extends Controller
     public function update(Request $request, string $id)
     {
         $request->validate([
-            'school_name' => 'required',
-            'degree' => 'required',
-            'field_of_study' => 'required',
+
+            'name' => 'required',
             'start_date' => 'required',
             'end_date' => 'required',
             'description' => 'required',
         ]);
-        $education = Education::find($id);
-        $education->update($request->all());
-        return redirect()->route('education.index')->with('massage', 'tambah pendidikan berhasil');
+        $Project = Project::find($id);
+        $Project->update($request->all());
+        return redirect()->route('project.index')->with('massage', 'tambah Pengalaman berhasil');
     }
 
     /**
@@ -84,8 +83,8 @@ class EducationController extends Controller
      */
     public function destroy(string $id)
     {
-        $education = Education::find($id);
-        $education->delete();
-        return redirect()->route('education.index')->with('massage', 'pendidikan berhasil dihapus');
+        $Project = Project::find($id);
+        $Project->delete();
+        return redirect()->route('project.index')->with('massage', 'Pengalaman berhasil dihapus');
     }
 }

@@ -2,19 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Education;
+use App\Models\Experience;
 use Illuminate\Http\Request;
 
-class EducationController extends Controller
+class ExperienceController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $datas = Education::all()->sortByDesc('start_date');
+        $datas = Experience::all()->sortByDesc('start_date');
 
-        return view('education.index', compact('datas'));
+        return view('experience.index', compact('datas'));
     }
 
     /**
@@ -22,8 +22,8 @@ class EducationController extends Controller
      */
     public function create()
     {
-        $title = "Tambah Pendidikan";
-        return view('education.create', compact('title'));
+        $title = "Tambah Pengalaman";
+        return view('experience.create', compact('title'));
     }
 
     /**
@@ -32,21 +32,21 @@ class EducationController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'school_name' => 'required',
-            'degree' => 'required',
-            'field_of_study' => 'required',
+
+            'company_name' => 'required',
+            'position' => 'required',
             'start_date' => 'required',
             'end_date' => 'required',
             'description' => 'required',
         ]);
-        Education::create($request->all());
-        return redirect()->route('education.index');
+        Experience::create($request->all());
+        return redirect()->route('experience.index');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Education $education)
+    public function show(Experience $Experience)
     {
         //
     }
@@ -56,9 +56,9 @@ class EducationController extends Controller
      */
     public function edit(string $id)
     {
-        $title = "Edit Pendidikan";
-        $edit = Education::find($id);
-        return view('education.edit', compact('title', 'edit'));
+        $title = "Edit Pengalaman";
+        $Experience = Experience::find($id);
+        return view('experience.edit', compact('title', 'Experience'));
     }
 
     /**
@@ -67,16 +67,16 @@ class EducationController extends Controller
     public function update(Request $request, string $id)
     {
         $request->validate([
-            'school_name' => 'required',
-            'degree' => 'required',
-            'field_of_study' => 'required',
+
+            'company_name' => 'required',
+            'position' => 'required',
             'start_date' => 'required',
             'end_date' => 'required',
             'description' => 'required',
         ]);
-        $education = Education::find($id);
-        $education->update($request->all());
-        return redirect()->route('education.index')->with('massage', 'tambah pendidikan berhasil');
+        $Experience = Experience::find($id);
+        $Experience->update($request->all());
+        return redirect()->route('experience.index')->with('massage', 'tambah Pengalaman berhasil');
     }
 
     /**
@@ -84,8 +84,8 @@ class EducationController extends Controller
      */
     public function destroy(string $id)
     {
-        $education = Education::find($id);
-        $education->delete();
-        return redirect()->route('education.index')->with('massage', 'pendidikan berhasil dihapus');
+        $Experience = Experience::find($id);
+        $Experience->delete();
+        return redirect()->route('experience.index')->with('massage', 'Pengalaman berhasil dihapus');
     }
 }
