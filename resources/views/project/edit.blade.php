@@ -13,7 +13,7 @@
                 </div>
                 <div class="form-group mb-3">
                     <label for="">Deskripsi</label>
-                    <textarea class="form-control" type="text" name="description">{{ $edit->email }}</textarea>
+                    <textarea class="form-control" type="text" name="description">{{ $edit->description }}</textarea>
                 </div>
 
 

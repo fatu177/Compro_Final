@@ -53,10 +53,10 @@
                                         <td>
                                             <p class="text-sm font-weight-bold mb-0 ps-1"> {{ $data->name }} </p>
                                         </td>
-
-                                        <p class="text-sm font-weight-bold mb-0 ps-1 text-center">
-                                            {{ $data->description }}
-                                        </p>
+                                        <td>
+                                            <p class="text-sm font-weight-bold mb-0 ps-1 text-center">
+                                                {{ $data->description }}
+                                            </p>
                                         </td>
                                         <td>
                                             <p class="text-sm font-weight-bold mb-0 ps-1 text-center">
