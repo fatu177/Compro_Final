@@ -13,9 +13,6 @@
                     <label for="">Deskripsi</label>
                     <textarea class="form-control" type="text" name="description"></textarea>
                 </div>
-
-
-
                 <div class="form-group mb-3">
                     <label for="tanggalMasuk">Tanggal Masuk</label>
                     <input id="tanggalMasuk" class="form-control tanggalm" type="date" max="<?= date('Y-m-d') ?>"
