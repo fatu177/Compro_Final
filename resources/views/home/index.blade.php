@@ -75,7 +75,8 @@
     <section id="portfolio" class="portfolio">
         <div class="container">
 
-            @include('home.porto')
+            @include('home.porto
+                        ')
 
         </div>
     </section><!-- End Portfolio Section -->
