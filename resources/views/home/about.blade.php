@@ -1,4 +1,4 @@
-<!-- ======= About Me ======= -->
+{{--  <!-- ======= About Me ======= -->  --}}
 <div class="about-me container">
 
     <div class="section-title">
@@ -43,7 +43,7 @@
                             echo $a;
                         @endphp</span>
                         </li>
-                        <li><i class="bi bi-chevron-right"></i> <strong>Pendidikan:</strong> <span>Master</span>
+                        <li><i class="bi bi-chevron-right"></i> <strong>Pendidikan:</strong> <span>{{ $education->sortBy('end_date')->last()->degree }}</span>
                         </li>
                         <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong>
                             <span>{{ $profile->email }}</span>
@@ -52,20 +52,59 @@
                     </ul>
                 </div>
             </div>
-            <p>
-                {{-- Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci
-                omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-                Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque
-                neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni
-                laudantium dolores. --}}
-            </p>
+            <div class="row skills-content">
+
+                <div class="col-lg-6">
+                    @php
+                        $c = 0;
+                        if ($skill->count() % 2 == 1) {
+                            $c++;
+                        }
+                    @endphp
+
+                    @for ($i = 0; $i < ($skill->count() + $c) / 2; $i++)
+                        <div class="progress">
+                            <span class="skill">{{ $skill[$i]->name }}<i class="val">{{ $skill[$i]->level }}%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="{{ $skill[$i]->level }}"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    @endfor
+                </div>
+
+                <div class="col-lg-6">
+                    @for ($i = ($skill->count() + $c) / 2; $i < $skill->count(); $i++)
+                        <div class="progress">
+                            <span class="skill">{{ $skill[$i]->name }}<i class="val">{{ $skill[$i]->level }}%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="{{ $skill[$i]->level }}"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    @endfor
+                </div>
+
+
+            </div>
+            <!-- ======= Skills  ======= -->
+            <div class="skills container">
+
+                <div class="section-title">
+                    <h2>Kemampuan</h2>
+                </div>
+
+
+
+            </div><!-- End Skills -->
         </div>
     </div>
 
-</div><!-- End About Me -->
+</div>
+{{--  <!-- End About Me -->  --}}
 
-<!-- ======= Counts ======= -->
-<div class="counts container">
+{{--  <!-- ======= Counts ======= -->  --}}
+{{--  <div class="counts container">
 
     <div class="row">
 
@@ -107,55 +146,13 @@
 
     </div>
 
-</div><!-- End Counts -->
-
-<!-- ======= Skills  ======= -->
-<div class="skills container">
-
-    <div class="section-title">
-        <h2>Kemampuan</h2>
-    </div>
-
-    <div class="row skills-content">
-
-        <div class="col-lg-6">
-            @php
-                $c = 0;
-                if ($skill->count() % 2 == 1) {
-                    $c++;
-                }
-            @endphp
-
-            @for ($i = 0; $i < ($skill->count() + $c) / 2; $i++)
-                <div class="progress">
-                    <span class="skill">{{ $skill[$i]->name }}<i class="val">{{ $skill[$i]->level }}%</i></span>
-                    <div class="progress-bar-wrap">
-                        <div class="progress-bar" role="progressbar" aria-valuenow="{{ $skill[$i]->level }}"
-                            aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-            @endfor
-        </div>
-
-        <div class="col-lg-6">
-            @for ($i = ($skill->count() + $c) / 2; $i < $skill->count(); $i++)
-                <div class="progress">
-                    <span class="skill">{{ $skill[$i]->name }}<i class="val">{{ $skill[$i]->level }}%</i></span>
-                    <div class="progress-bar-wrap">
-                        <div class="progress-bar" role="progressbar" aria-valuenow="{{ $skill[$i]->level }}"
-                            aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-            @endfor
-        </div>
+</div>  --}}
+<!-- End Counts -->
 
 
-    </div>
-
-</div><!-- End Skills -->
 
 <!-- ======= Interests ======= -->
-<div class="interests container">
+{{--  <div class="interests container">
 
     <div class="section-title">
         <h2>Interests</h2>
@@ -236,10 +233,10 @@
         </div>
     </div>
 
-</div><!-- End Interests -->
+</div><!-- End Interests -->  --}}
 
 <!-- ======= Testimonials ======= -->
-<div class="testimonials container">
+{{--  <div class="testimonials container">
 
     <div class="section-title">
         <h2>Testimonials</h2>
@@ -335,4 +332,5 @@
 
     </div>
 
-</div><!-- End Testimonials  -->
+</div>  --}}
+<!-- End Testimonials  -->

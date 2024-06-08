@@ -1,11 +1,4 @@
 <h1><a href="{{ route('home') }}">{{ $profile->name }}</a></h1>
-<!-- Uncomment below if you prefer to use an image logo -->
-{{-- <a href="index.html" class="mr-auto"><img src="{{ asset('assets/fe/assets/img/logo.png') }}" alt=""
-                    class="img-fluid"></a> --}}
-
-<!-- Uncomment below if you prefer to use an image logo -->
-<!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
-<h2>Saya <span class="typed" data-typed-items="berasal dari Jakarta,seorang Web Programming"></span> </h2>
 
 <nav id="navbar" class="navbar">
     <ul>

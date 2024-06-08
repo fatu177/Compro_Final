@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Education;
 use App\Models\profile;
 use App\Models\Skill;
 use App\Models\User;
@@ -13,6 +14,7 @@ class HomeController extends Controller
     {
         $profile = profile::get()->last();
         $skill = Skill::get();
-        return view('home.index', compact('profile', 'skill'));
+        $education = Education::all();
+        return view('home.index', compact('profile', 'skill', 'education'));
     }
 }

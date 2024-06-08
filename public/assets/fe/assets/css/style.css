@@ -377,6 +377,7 @@ section .container {
     padding: 30px;
 }
 
+
 @media (max-width: 768px) {
     section {
         top: 120px;
