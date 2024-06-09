@@ -63,13 +63,13 @@
     </section><!-- End Resume Section -->
 
     <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
+    {{--  <section id="services" class="services">
         <div class="container">
 
             @include('home.service')
 
         </div>
-    </section><!-- End Services Section -->
+    </section><!-- End Services Section -->  --}}
 
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio">

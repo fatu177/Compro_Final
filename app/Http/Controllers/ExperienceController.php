@@ -57,8 +57,8 @@ class ExperienceController extends Controller
     public function edit(string $id)
     {
         $title = "Edit Pengalaman";
-        $Experience = Experience::find($id);
-        return view('experience.edit', compact('title', 'Experience'));
+        $edit = Experience::find($id);
+        return view('experience.edit', compact('title', 'edit'));
     }
 
     /**

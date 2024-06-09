@@ -3,14 +3,14 @@
     <div class="m-3" align="right">
         <a class="btn bg-gradient-dark mb-0" href="{{ route('experience.create') }}"><i
                 class="material-icons text-sm">add</i>&nbsp;&nbsp;Tambah
-            Pendidikan</a>
+            Pengalaman</a>
     </div>
     <div class="row">
         <div class="col-12">
             <div class="card my-4">
                 <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                     <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
-                        <h6 class="text-white text-capitalize ps-3">Pendidikan</h6>
+                        <h6 class="text-white text-capitalize ps-3">Pengalaman</h6>
                     </div>
                 </div>
                 <div class="card-body px-0 pb-2">

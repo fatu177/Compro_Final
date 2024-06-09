@@ -24,11 +24,11 @@
                 <div class="form-group mb-3">
                     <label for="tanggalMasuk">Tanggal Masuk</label>
                     <input id="tanggalMasuk" class="form-control tanggalm" type="date" name="start_date"
-                        max="<?= date('Y-m-d') ?>" value="">
+                        max="<?= date('Y-m-d') ?>" value="{{ $edit->start_date }}">
                 </div>
                 <div class="form-group mb-3">
                     <label for="tanggalKeluar">Tanggal Keluar</label>
-                    <input id="tanggalKeluar" class="form-control tanggalk" type="date" name="end_date" value=""
+                    <input id="tanggalKeluar" class="form-control tanggalk" type="date" name="end_date" value="{{ $edit->end_date }}"
                         max="<?= date('Y-m-d') ?>">
                 </div>
 

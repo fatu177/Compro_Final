@@ -54,8 +54,8 @@ class SkillController extends Controller
     public function edit(string $id)
     {
         $title = "Edit Kemampuan";
-        $Skill = Skill::find($id);
-        return view('skill.edit', compact('title', 'Skill'));
+        $edit = Skill::find($id);
+        return view('skill.edit', compact('title', 'edit'));
     }
 
     /**

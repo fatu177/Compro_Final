@@ -22,7 +22,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        $title = "Tambah Pengalaman";
+        $title = "Tambah Project";
         return view('project.create', compact('title'));
     }
 
@@ -75,7 +75,7 @@ class ProjectController extends Controller
         ]);
         $Project = Project::find($id);
         $Project->update($request->all());
-        return redirect()->route('project.index')->with('massage', 'tambah Pengalaman berhasil');
+        return redirect()->route('project.index')->with('massage', 'tambah Project berhasil');
     }
 
     /**
@@ -85,6 +85,6 @@ class ProjectController extends Controller
     {
         $Project = Project::find($id);
         $Project->delete();
-        return redirect()->route('project.index')->with('massage', 'Pengalaman berhasil dihapus');
+        return redirect()->route('project.index')->with('massage', 'Project berhasil dihapus');
     }
 }
