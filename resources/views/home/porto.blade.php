@@ -3,16 +3,16 @@
     <p>My Works</p>
 </div>
 
-<div class="row">
+{{--  <div class="row">
     <div class="col-lg-12 d-flex justify-content-center">
         <ul id="portfolio-flters">
             <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
+            <li data-filter=".filter-app" id="tombol">App</li>
             <li data-filter=".filter-card">Card</li>
             <li data-filter=".filter-web">Web</li>
         </ul>
     </div>
-</div>
+</div>  --}}
 
 <div class="row portfolio-container">
 
@@ -25,7 +25,7 @@
                 <div class="portfolio-links">
                     <a href="{{asset('assets/fe/assets/img/portfolio/portfolio-1.jpg')}}" data-gallery="portfolioGallery"
                         class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                    <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery"
+                    <a href="{{{ asset('assets/fe/portfolio-details.html') }}}" data-gallery="portfolioDetailsGallery"
                         data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i
                             class="bx bx-link"></i></a>
                 </div>

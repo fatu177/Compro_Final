@@ -21,6 +21,7 @@ Route::prefix('admin')->group(function () {
         Route::resource('/skill', '\App\Http\Controllers\SkillController');
         Route::resource('/profile', '\App\Http\Controllers\ProfileController');
         Route::resource('/project', '\App\Http\Controllers\ProjectController');
+        Route::resource('/gambar', '\App\Http\Controllers\GambarController');
         Route::post('/logout', '\App\Http\Controllers\LoginController@logout')->name('logout');
     });
 });

@@ -8,7 +8,7 @@
                 @method('put')
                 <div class="form-group mb-3">
                     <label for="">Skill</label>
-                    <input class="form-control" type="text" name="name" value="{{ $edit->skill }}"
+                    <input class="form-control" type="text" name="name" value="{{ $edit->name }}"
                         placeholder="Masukan Nama Skill Anda">
                 </div>
                 <div class="form-group mb-3">
