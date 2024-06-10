@@ -1,4 +1,5 @@
 @extends('layout.app')
+
 @section('content')
     @php
         $i = 0;
@@ -15,6 +16,7 @@
                 Profile</a>
         </div>
     @endif
+
     <div class="row">
         <div class="col-12">
             <div class="card my-4">
@@ -24,8 +26,15 @@
                     </div>
                 </div>
                 <div class="card-body px-0 pb-2">
+                    <div class="" align="center">
+
+                        <img src="{{ asset('images/' . $data->first()->image) }}" class="align-content-center m-3"
+                            alt="" width="200px">
+                    </div>
                     <div class="table-responsive p-0">
+
                         <table class="table align-items-center justify-content-center mb-0">
+
                             <thead>
                                 <tr>
                                     <th
@@ -64,6 +73,7 @@
                             </thead>
                             <tbody>
                                 <span hidden>{{ $i = 1 }}</span>
+
                                 @foreach ($datas as $data)
                                     <tr>
 
@@ -137,7 +147,9 @@
                                 @endforeach
                             </tbody>
                         </table>
+
                     </div>
+
                 </div>
             </div>
         </div>

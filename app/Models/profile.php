@@ -20,7 +20,8 @@ class profile extends Model
         'facebook',
         'instagram',
         'description',
-        'image'
+        'image',
+        'profession'
     ];
     use HasFactory;
 }

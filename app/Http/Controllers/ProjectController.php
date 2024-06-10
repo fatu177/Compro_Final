@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\gambar;
 use App\Models\Project;
 use Illuminate\Http\Request;
 
@@ -11,10 +12,14 @@ class ProjectController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
-        $datas = Project::all()->sortByDesc('start_date');
 
-        return view('project.index', compact('datas'));
+    {
+
+        $datas = Project::all()->sortByDesc('start_date');
+        $image = gambar::all()->sortBy('id_project');
+
+
+        return view('project.index', compact('datas', 'image'));
     }
 
     /**
