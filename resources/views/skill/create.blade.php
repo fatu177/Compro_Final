@@ -5,19 +5,25 @@
         <div class="card-body">
             <form action="{{ route('skill.store') }}" method="POST">
                 @csrf
-                <div class="form-group mb-3">
-                    <label for="">Skill</label>
-                    <input class="form-control" type="text" name="name" value=""
-                        placeholder="Masukan Nama Skill Anda">
-                </div>
-                <div class="form-group mb-3">
-                    <label for="">Level</label>
-                    <input class="form-control" type="text" name="level" value=""
-                        placeholder="Masukan Level Skill Anda">
-                </div>
-                <div class="form-group mb-3">
-                    <input type="submit" class="btn btn-primary" value="Simpan">
-                    <a href="{{ url()->previous() }}" class="btn btn-danger">Kembali</a>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="form-group mb-3">
+                            <label for="">Skill</label>
+                            <div class="input-group input-group-outline my-3">
+                                <input class="form-control" type="text" name="name" value=""
+                                    placeholder="Masukan Nama Skill Anda">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="form-group mb-3">
+                            <label for="">Level</label>
+                            <div class="input-group input-group-outline my-3">
+                                <input class="form-control" type="text" name="level" value=""
+                                    placeholder="Masukan Level Skill Anda">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </form>
         </div>

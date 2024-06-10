@@ -3,14 +3,14 @@
 <div class="about-me container">
 
     <div class="section-title">
-        
+
         <h2>About</h2>
         <p>Learn more about me</p>
     </div>
 
     <div class="row">
         <div class="col-lg-4" data-aos="fade-right">
-            <img src="{{ asset('assets/fe/assets/img/me.jpg') }}" class="img-fluid" alt="">
+            <img src="{{ asset('images/' . $profile->image) }}" class="img-fluid" alt="">
         </div>
         <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
             <h3>WEB PROGRAMMING</h3>
@@ -37,13 +37,16 @@
                 <div class="col-lg-6">
                     <ul>
                         <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span> @php
-                                $tgl = strtotime($profile->birthday);
-                                $a = date('Y') - date('Y', $tgl);
-                                if (date('m') < date('m', $tgl) and date('d') < date('d', $tgl)) { $a--; } echo $a;
-                                    @endphp</span>
+                            $tgl = strtotime($profile->birthday);
+                            $a = date('Y') - date('Y', $tgl);
+                            if (date('m') < date('m', $tgl) and date('d') < date('d', $tgl)) {
+                                $a--;
+                            }
+                            echo $a;
+                        @endphp</span>
                         </li>
-                        <li><i class="bi bi-chevron-right"></i> <strong>Education:</strong> <span>{{
-                                $education->first()->degree }}</span>
+                        <li><i class="bi bi-chevron-right"></i> <strong>Education:</strong>
+                            <span>{{ $education->first()->degree }}</span>
                         </li>
                         <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong>
                             <span>{{ $profile->email }}</span>
@@ -58,34 +61,35 @@
                     <div class="col-lg-6">
                         <!-- Loop PHP: Generate the first half of skills -->
                         @php
-                        $c = 0;
-                        if ($skill->count() % 2 == 1) {
-                        $c++;
-                        }
+                            $c = 0;
+                            if ($skill->count() % 2 == 1) {
+                                $c++;
+                            }
                         @endphp
                         @for ($i = 0; $i < ($skill->count() + $c) / 2; $i++)
                             <div class="progress">
-                                <span class="skill">{{ $skill[$i]->name }}<i class="val">{{ $skill[$i]->level
-                                        }}%</i></span>
+                                <span class="skill">{{ $skill[$i]->name }}<i
+                                        class="val">{{ $skill[$i]->level }}%</i></span>
                                 <div class="progress-bar-wrap">
                                     <div class="progress-bar" role="progressbar" aria-valuenow="{{ $skill[$i]->level }}"
                                         aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
-                            @endfor
+                        @endfor
                     </div>
                     <div class="col-lg-6">
                         <!-- Loop PHP: Generate the second half of skills -->
                         @for ($i = ($skill->count() + $c) / 2; $i < $skill->count(); $i++)
                             <div class="progress">
-                                <span class="skill">{{ $skill[$i]->name }}<i class="val">{{ $skill[$i]->level
-                                        }}%</i></span>
+                                <span class="skill">{{ $skill[$i]->name }}<i
+                                        class="val">{{ $skill[$i]->level }}%</i></span>
                                 <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="{{ $skill[$i]->level }}"
-                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar" role="progressbar"
+                                        aria-valuenow="{{ $skill[$i]->level }}" aria-valuemin="0" aria-valuemax="100">
+                                    </div>
                                 </div>
                             </div>
-                            @endfor
+                        @endfor
                     </div>
                 </div>
             </div>

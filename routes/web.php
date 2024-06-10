@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 Route::get('/', '\App\Http\Controllers\HomeController@index')->name('home');
-
+Route::get('/detail/{id}', 'App\Http\Controllers\HomeController@detail')->name('home.detail');
 Route::prefix('admin')->group(function () {
     Route::get('/', '\App\Http\Controllers\LoginController@index')->name('login');
     Route::post('/', '\App\Http\Controllers\LoginController@login')->name('login.post');

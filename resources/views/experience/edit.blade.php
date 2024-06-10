@@ -6,31 +6,55 @@
             <form action="{{ route('experience.update', $edit->id) }}" method="POST">
                 @csrf
                 @method('put')
-                <div class="form-group mb-3">
-                    <label for="">Kantor</label>
-                    <input class="form-control" type="text" name="company_name" value="{{ $edit->company_name }}"
-                        placeholder="Masukan Nama Kantor Anda">
-                </div>
-                <div class="form-group mb-3">
-                    <label for="">Posisi</label>
-                    <input class="form-control" type="text" name="position" value="{{ $edit->position }}"
-                        style="bordered" placeholder="Masukan Posisi Pekerjaan Anda">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="form-group mb-3">
+                            <label for="">Kantor</label>
+                            <div class="input-group input-group-outline my-3">
+                                <input class="form-control" type="text" name="company_name"
+                                    value="{{ $edit->company_name }}" placeholder="Masukan Nama Kantor Anda">
+                            </div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="">Posisi</label>
+                            <div class="input-group input-group-outline my-3">
+                                <input class="form-control" type="text" name="position" value="{{ $edit->position }}"
+                                    style="bordered" placeholder="Masukan Posisi Pekerjaan Anda">
+                            </div>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label for="">Deskripsi</label>
+                            <div class="input-group input-group-outline my-3">
+                                <textarea class="form-control" type="text" name="description" placeholder="Masukan Deskripsi Pekerjaan Anda">{{ $edit->description }}</textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="tanggalMasuk">Tanggal Masuk</label>
+                                <div class="input-group input-group-outline my-3">
+                                    <input id="tanggalMasuk" class="form-control tanggalm" type="date" name="start_date"
+                                        max="<?= date('Y-m-d') ?>" value="{{ $edit->start_date }}">
+                                </div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="tanggalKeluar">Tanggal Keluar</label>
+                                <div class="input-group input-group-outline my-3">
+                                    <input id="tanggalKeluar" class="form-control tanggalk" type="date" name="end_date"
+                                        value="{{ $edit->end_date }}" max="<?= date('Y-m-d') ?>">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="form-group mb-3">
-                    <label for="">Deskripsi</label>
-                    <textarea class="form-control" type="text" name="description" placeholder="Masukan Deskripsi Pekerjaan Anda">{{ $edit->description }}</textarea>
-                </div>
-                <div class="form-group mb-3">
-                    <label for="tanggalMasuk">Tanggal Masuk</label>
-                    <input id="tanggalMasuk" class="form-control tanggalm" type="date" name="start_date"
-                        max="<?= date('Y-m-d') ?>" value="{{ $edit->start_date }}">
-                </div>
-                <div class="form-group mb-3">
-                    <label for="tanggalKeluar">Tanggal Keluar</label>
-                    <input id="tanggalKeluar" class="form-control tanggalk" type="date" name="end_date" value="{{ $edit->end_date }}"
-                        max="<?= date('Y-m-d') ?>">
-                </div>
+
+
+
+
 
                 <script>
                     document.getElementById('tanggalMasuk').addEventListener('change', function() {
