@@ -36,7 +36,7 @@
                             <label for="">Birthday</label>
                             <div class="input-group input-group-outline my-3">
                                 <input class="form-control" type="date" name="birthday" value="{{ $edit->birthday }}"
-                                    max="<?= date('Y-m-d') ?>"">
+                                    max="<?= date('Y-m-d') ?>">
                             </div>
                         </div>
                         <div class="form-group mb-3">

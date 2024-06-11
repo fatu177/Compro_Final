@@ -5,6 +5,7 @@
                 class="material-icons text-sm">add</i>&nbsp;&nbsp;Tambah
             Project</a>
     </div>
+
     <div class="row">
         <div class="col-12">
             <div class="card my-4">
@@ -15,7 +16,7 @@
                 </div>
                 <div class="card-body px-0 pb-2">
                     <div class="table-responsive p-0">
-                        <table id="example" class="display">
+                        <table class="table align-items-center justify-content-center mb-0" style="width:100%">
                             <thead>
                                 <tr>
                                     <th
@@ -86,6 +87,9 @@
                                     </tr>
                                 @endforeach
                             </tbody>
+                            <tfoot>
+
+                            </tfoot>
                         </table>
                     </div>
                 </div>
@@ -108,7 +112,7 @@
                 </div>
                 <div class="card-body px-0 pb-2">
                     <div class="table-responsive p-0">
-                        <table class="table align-items-center justify-content-center mb-0"id="example">
+                        <table class="table align-items-center justify-content-center mb-0" id="example" name="example">
                             <thead>
                                 <tr>
                                     <th
@@ -127,7 +131,7 @@
                                     <th
                                         class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">
                                         Aksi</th>
-                                    <th></th>
+
                                 </tr>
                             </thead>
                             <tbody>
