@@ -18,11 +18,11 @@
              <i class="bx bx-share-alt"></i>
              <h3>Social Profiles</h3>
              <div class="social-links">
-                 <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                 <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                 <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                 <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
-                 <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                 <a href="{{ $profile->twitter }}" class="twitter"><i class="bi bi-twitter"></i></a>
+                 <a href="{{ $profile->facebook }}" class="facebook"><i class="bi bi-facebook"></i></a>
+                 <a href="{{ $profile->instagram }}" class="instagram"><i class="bi bi-instagram"></i></a>
+                 {{-- <a href="{{ $profile-> }}" class="google-plus"><i class="bi bi-skype"></i></a> --}}
+                 <a href="{{ $profile->linkedin }}" class="linkedin"><i class="bi bi-linkedin"></i></a>
              </div>
          </div>
      </div>

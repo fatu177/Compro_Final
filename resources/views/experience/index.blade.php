@@ -14,8 +14,8 @@
                     </div>
                 </div>
                 <div class="card-body px-0 pb-2">
-                    <div class="table-responsive p-0">
-                        <table class="table align-items-center justify-content-center mb-0">
+                    <div class="table-responsive p-0 ">
+                        <table class="table align-items-center justify-content-center mb-0" id="example">
                             <thead>
                                 <tr>
                                     <th

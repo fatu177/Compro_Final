@@ -10,9 +10,7 @@
 <script src="{{ asset('assets/fe/assets/js/main.js') }}"></script>
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
-<script>
-
-</script>
+<script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
 <script>
     // const typed = gete('.typed');
     // if (typed) {
@@ -36,5 +34,7 @@
         backSpeed: 50,
         backDelay: 2000
     });
-    
+</script>
+<script>
+    new DataTable('#example');
 </script>

@@ -10,7 +10,7 @@
 
     <div class="row">
         <div class="col-lg-4" data-aos="fade-right">
-            <img src="{{ asset('images/' . $profile->image) }}" class="img-fluid" alt="">
+            <img src="{{ asset('images/' . $profile->image) }}" class="img-fluid" alt="" height="80vh">
         </div>
         <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
             <h3>WEB PROGRAMMING</h3>
@@ -36,14 +36,19 @@
                 </div>
                 <div class="col-lg-6">
                     <ul>
-                        <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span> @php
-                            $tgl = strtotime($profile->birthday);
-                            $a = date('Y') - date('Y', $tgl);
-                            if (date('m') < date('m', $tgl) and date('d') < date('d', $tgl)) {
-                                $a--;
-                            }
-                            echo $a;
-                        @endphp</span>
+                        <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>
+                                @php
+                                    $tgl = strtotime($profile->birthday);
+                                    $a = date('Y') - date('Y', $tgl);
+                                    if (
+                                        date('m') < date('m', $tgl) ||
+                                        (date('m') == date('m', $tgl) && date('d') < date('d', $tgl))
+                                    ) {
+                                        $a--;
+                                    }
+                                    echo $a;
+                                @endphp
+                            </span>
                         </li>
                         <li><i class="bi bi-chevron-right"></i> <strong>Education:</strong>
                             <span>{{ $education->first()->degree }}</span>

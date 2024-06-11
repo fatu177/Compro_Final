@@ -8,28 +8,30 @@
 
         <!-- Loop PHP: Generate the first half of educations -->
         @php
-        $c = 0;
-        if ($education->count() % 2 == 1) {
-        $c++;
-        }
+            $c = 0;
+            if ($education->count() % 2 == 1) {
+                $c++;
+            }
         @endphp
         @for ($i = 0; $i < ($education->count() + $c) / 2; $i++)
-
             <div class='resume-item'>
 
 
 
-                <h5>{{ date('Y', strtotime($education[$i]->start_date)) }} -
-                    @if (date('Y') == date('Y', strtotime($education[$i]->end_date)))
-                    Present
+                <h5>
+                    {{ date('Y', strtotime($education[$i]->start_date)) }} -
+                    @if (date('d-m-Y', strtotime($education[$i]->end_date)) == date('d-m-Y', $education[$i]->updated_at->timestamp))
+                        Present
                     @else
-                     {{ date('Y', strtotime($education[$i]->end_date)) }}
-                    @endif</h5>
+                        {{ date('Y', strtotime($education[$i]->end_date)) }}
+                    @endif
+                </h5>
+
                 <h4>{{ $education[$i]->school_name }}</h4>
                 <p><em>{{ $education[$i]->degree }} {{ $education[$i]->field_of_study }}</em></p>
                 <p>{{ $education[$i]->description }}</p>
             </div>
-            @endfor
+        @endfor
     </div>
     <div class="col-lg-6">
         <!-- Loop PHP: Generate the second half of educations -->
@@ -38,16 +40,19 @@
 
 
 
-                <h5>{{ date('Y', strtotime($education[$i]->start_date)) }} - @if (date('Y') == date('Y', strtotime($education[$i]->end_date)))
-                    Present
+                <h5>
+                    {{ date('Y', strtotime($education[$i]->start_date)) }} -
+                    @if (date('d-m-Y', strtotime($education[$i]->end_date)) == date('d-m-Y', $education[$i]->updated_at->timestamp))
+                        Present
                     @else
-                     {{ date('Y', strtotime($education[$i]->end_date)) }}
-                    @endif</h5>
+                        {{ date('Y', strtotime($education[$i]->end_date)) }}
+                    @endif
+                </h5>
                 <h4>{{ $education[$i]->school_name }}</h4>
                 <p><em>{{ $education[$i]->degree }} {{ $education[$i]->field_of_study }}</em></p>
                 <p>{{ $education[$i]->description }}</p>
             </div>
-            @endfor
+        @endfor
     </div>
 </div>
 
@@ -58,30 +63,28 @@
 
         <!-- Loop PHP: Generate the first half of educations -->
         @php
-        $c = 0;
-        if ($experience->count() % 2 == 1) {
-        $c++;
-        }
+            $c = 0;
+            if ($experience->count() % 2 == 1) {
+                $c++;
+            }
         @endphp
         @for ($i = 0; $i < ($experience->count() + $c) / 2; $i++)
-
             <div class='resume-item'>
 
 
-
-                <h5>{{ date('d F Y', strtotime($experience[$i]->start_date)) }} -
-
-                    @if (date('Y-m-d') == $experience[$i]->end_date)
-                    Present
+                <h5>
+                    {{ date('d F Y', strtotime($experience[$i]->start_date)) }} -
+                    @if (date('d-m-Y', strtotime($experience[$i]->end_date)) == date('d-m-Y', $experience[$i]->updated_at->timestamp))
+                        Present
                     @else
-                     {{ date('d F Y', strtotime($experience[$i]->end_date)) }}
+                        {{ date('Y', strtotime($experience[$i]->end_date)) }}
                     @endif
                 </h5>
                 <h4>{{ $experience[$i]->company_name }}</h4>
                 <p><em>{{ $experience[$i]->position }}</em></p>
                 <p>{{ $experience[$i]->description }}</p>
             </div>
-            @endfor
+        @endfor
     </div>
     <div class="col-lg-6">
         <!-- Loop PHP: Generate the second half of experiences -->
@@ -90,17 +93,18 @@
 
 
 
-                <h5>{{ date('d F Y', strtotime($experience[$i]->start_date)) }} -
-                    @if (date('Y-m-d') == $experience[$i]->end_date)
-                    Present
+                <h5>
+                    {{ date('d F Y', strtotime($experience[$i]->start_date)) }} -
+                    @if (date('d-m-Y', strtotime($experience[$i]->end_date)) == date('d-m-Y', $experience[$i]->updated_at->timestamp))
+                        Present
                     @else
-                     {{ date('d F Y', strtotime($experience[$i]->end_date)) }}
+                        {{ date('Y', strtotime($experience[$i]->end_date)) }}
                     @endif
                 </h5>
                 <h4>{{ $experience[$i]->company_name }}</h4>
                 <p><em>{{ $experience[$i]->position }}</em></p>
                 <p>{{ $experience[$i]->description }}</p>
             </div>
-            @endfor
+        @endfor
     </div>
 </div>

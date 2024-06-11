@@ -33,7 +33,7 @@
                     </div>
                     <div class="table-responsive p-0">
 
-                        <table class="table align-items-center justify-content-center mb-0">
+                        <table class="table align-items-center justify-content-center mb-0" id="example">
 
                             <thead>
                                 <tr>

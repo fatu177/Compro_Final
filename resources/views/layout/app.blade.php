@@ -36,6 +36,7 @@
     <!-- CSS Files -->
     <link id="pagestyle" href="{{ asset('assets/admin/assets/css/material-dashboard.css?v=3.0.0') }}"
         rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
 </head>
 
 <body class="g-sidenav-show  bg-gray-200">
@@ -323,6 +324,10 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="{{ asset('assets/admin/assets/js/material-dashboard.min.js?v=3.0.0') }}"></script>
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
+    <script>
+        new DataTable('#example');
+    </script>
 </body>
 
 </html>

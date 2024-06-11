@@ -5,13 +5,13 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Personal Bootstrap Template</title>
+    <title>Fathu Rahman Profile</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="{{ asset('assets/fe/assets/img/favicon.png') }}" rel="icon">
-    <link href="{{ asset('assets/fe/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+    {{-- <link href="{{ asset('assets/fe/assets/img/favicon.png') }}" rel="icon">
+    <link href="{{ asset('assets/fe/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon"> --}}
 
     <!-- Google Fonts -->
     <link
@@ -25,6 +25,7 @@
     <link href="{{ asset('assets/fe/assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/fe/assets/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/fe/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
 
     <!-- Template Main CSS File -->
     <link href="{{ asset('assets/fe/assets/css/style.css') }}" rel="stylesheet">
@@ -76,7 +77,7 @@
         <div class="container">
 
             @include('home.porto
-                                    ')
+                                                            ')
 
         </div>
     </section><!-- End Portfolio Section -->

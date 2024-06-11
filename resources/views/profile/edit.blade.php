@@ -35,7 +35,8 @@
 
                             <label for="">Birthday</label>
                             <div class="input-group input-group-outline my-3">
-                                <input class="form-control" type="date" name="birthday" value="{{ $edit->birthday }}">
+                                <input class="form-control" type="date" name="birthday" value="{{ $edit->birthday }}"
+                                    max="<?= date('Y-m-d') ?>"">
                             </div>
                         </div>
                         <div class="form-group mb-3">
@@ -89,8 +90,8 @@
                         <div class="form-group mb-3">
                             <label for="">Instagram</label>
                             <div class="input-group input-group-outline my-3">
-                                <input value="{{ $edit->instagram }}" class="form-control" type="text" name="instagram"
-                                    placeholder="Masukan Instagram Anda">
+                                <input value="{{ $edit->instagram }}" class="form-control" type="text"
+                                    name="instagram" placeholder="Masukan Instagram Anda">
                             </div>
                         </div>
                         <div class="form-group mb-3">

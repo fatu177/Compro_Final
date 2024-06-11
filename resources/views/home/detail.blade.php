@@ -55,7 +55,7 @@
                             <div class="swiper-wrapper align-items-center text-center">
                                 @foreach ($gambar as $gambar)
                                     <div class="swiper-slide">
-                                        <img src="{{ asset('images/' . $gambar->image) }}" width="400px"
+                                        <img src="{{ asset('images/' . $gambar->image) }}" height="500vh"
                                             alt="">
                                     </div>
                                 @endforeach
@@ -72,8 +72,14 @@
                         <h3>Project information</h3>
                         <ul>
                             <li><strong>Category</strong>: Web design</li>
-                            <li><strong>Client</strong>: ASU Company</li>
-                            <li><strong>Project date</strong>: 01 March, 2020</li>
+                            <li><strong>Client</strong>: Company</li>
+                            <li><strong>Project date</strong>: {{ date('Y', strtotime($project->start_date)) }} -
+                                @if (date('d-m-Y', strtotime($project->end_date)) == date('d-m-Y', $project->updated_at->timestamp))
+                                    Present
+                                @else
+                                    {{ date('Y', strtotime($project->end_date)) }}
+                                @endif
+                            </li>
                             <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
                         </ul>
 

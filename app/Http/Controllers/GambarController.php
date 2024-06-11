@@ -88,7 +88,7 @@ class GambarController extends Controller
         $data = $request->all();
         if ($request->file('image')) {
             $request->validate([
-                'name' => 'required'
+                'image' => 'required'
             ]);
             $imagePath = public_path('images/' . $gambar->image);
             if (File::exists($imagePath)) {
