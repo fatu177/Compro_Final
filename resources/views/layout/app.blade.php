@@ -63,6 +63,9 @@
         $(document).ready(function() {
             $('#example').DataTable();
         });
+        $(document).ready(function() {
+            $('#example1').DataTable();
+        });
         var ctx = document.getElementById("chart-bars").getContext("2d");
 
         new Chart(ctx, {

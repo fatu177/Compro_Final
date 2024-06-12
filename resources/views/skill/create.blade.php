@@ -5,6 +5,7 @@
         <div class="card-body">
             <form action="{{ route('skill.store') }}" method="POST">
                 @csrf
+                @method('put')
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
                         <div class="form-group mb-3">
@@ -24,6 +25,11 @@
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <input type="submit" class="btn btn-primary" value="Simpan">
+                    <a href="{{ url()->previous() }}" class="btn btn-danger">Kembali</a>
                 </div>
             </form>
         </div>

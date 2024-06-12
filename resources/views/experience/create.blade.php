@@ -5,12 +5,13 @@
         <div class="card-body">
             <form action="{{ route('experience.store') }}" method="POST">
                 @csrf
+                @method('put')
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
                         <div class="form-group mb-3">
                             <label for="">Kantor</label>
                             <div class="input-group input-group-outline my-3">
-                                <input class="form-control" type="text" name="company_name" value="}"
+                                <input class="form-control" type="text" name="company_name" value=""
                                     placeholder="Masukan Nama Kantor Anda">
                             </div>
                         </div>
@@ -50,17 +51,18 @@
                     </div>
                 </div>
 
+
+
+
+
+
                 <script>
                     document.getElementById('tanggalMasuk').addEventListener('change', function() {
                         var masukDate = this.value;
                         document.getElementById('tanggalKeluar').min = masukDate;
                     });
-
-                    document.getElementById('tanggalKeluar').addEventListener('change', function() {
-                        var KeluarDate = this.value;
-                        document.getElementById('tanggalMasuk').max = KeluarDate;
-                    })
                 </script>
+
 
                 <div class="form-group mb-3">
                     <input type="submit" class="btn btn-primary" value="Simpan">
@@ -70,3 +72,9 @@
         </div>
     </div>
 @endsection
+<script>
+    document.getElementById('tanggalMasuk').addEventListener('change', function() {
+        var masukDate = this.value;
+        document.getElementById('tanggalKeluar').min = masukDate;
+    });
+</script>

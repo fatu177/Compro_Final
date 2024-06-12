@@ -33,7 +33,7 @@
                     </div>
                     <div class="table-responsive p-0">
 
-                        <table class="table align-items-center justify-content-center mb-0" id="example">
+                        <table class="table align-items-center justify-content-center mb-0">
 
                             <thead>
                                 <tr>
@@ -68,7 +68,7 @@
                                     <th
                                         class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">
                                         Aksi</th>
-                                    <th></th>
+
                                 </tr>
                             </thead>
                             <tbody>
@@ -91,14 +91,10 @@
                                         </td>
                                         <td>
                                             <p class="text-sm font-weight-bold mb-0 ps-1 text-center">
-                                                {{ $data->description }}
-                                            </p>
-                                        </td>
-                                        <td>
-                                            <p class="text-sm font-weight-bold mb-0 ps-1 text-center">
                                                 {{ $data->phone }}
                                             </p>
                                         </td>
+
                                         <td>
                                             <p class="text-sm font-weight-bold mb-0 ps-1 text-center">
                                                 {{ $data->address }}
@@ -127,6 +123,11 @@
                                         <td>
                                             <p class="text-sm font-weight-bold mb-0 ps-1 text-center">
                                                 {{ $data->instagram }}
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p class="text-sm font-weight-bold mb-0 ps-1 text-center">
+                                                {{ $data->description }}
                                             </p>
                                         </td>
                                         <td>

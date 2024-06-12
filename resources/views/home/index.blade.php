@@ -25,7 +25,7 @@
     <link href="{{ asset('assets/fe/assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/fe/assets/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/fe/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
+    
 
     <!-- Template Main CSS File -->
     <link href="{{ asset('assets/fe/assets/css/style.css') }}" rel="stylesheet">
