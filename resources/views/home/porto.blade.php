@@ -30,8 +30,9 @@
                     <div class="portfolio-links">
                         <a href=" {{ asset('images/' . $gambar->first()->image) }} " data-gallery="portfolioGallery"
                             class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                        <a href="{" data-gallery="portfolioDetailsGallery" data-glightbox="type: external"
-                            class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                        <a href="{{ route('home.detail', $project->id) }}" data-gallery="portfolioDetailsGallery"
+                            data-glightbox="type: external" class="portfolio-details-lightbox"
+                            title="Portfolio Details"><i class="bx bx-link"></i></a>
                     </div>
                 </div>
             </div>
