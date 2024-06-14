@@ -56,7 +56,7 @@
                                         <td>
                                             <p class="text-sm font-weight-bold mb-0 ps-1"> {{ $data->position }} </p>
                                         </td>
-                                        <td>
+                                        <td style=" max-width: 30vw;">
                                             <p class="text-sm font-weight-bold mb-0 ps-1 text-center"
                                                 style="word-wrap: break-word;  white-space: normal;">
                                                 {{ $data->description }}
