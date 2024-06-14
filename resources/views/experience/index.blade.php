@@ -14,7 +14,7 @@
                     </div>
                 </div>
                 <div class="card-body px-0 pb-2">
-                    <div class="table-responsive p-0 ">
+                    <div class="table-responsive p-5 ">
                         <table class="table align-items-center justify-content-center mb-0" id="example">
                             <thead>
                                 <tr>
@@ -57,7 +57,8 @@
                                             <p class="text-sm font-weight-bold mb-0 ps-1"> {{ $data->position }} </p>
                                         </td>
                                         <td>
-                                            <p class="text-sm font-weight-bold mb-0 ps-1 text-center">
+                                            <p class="text-sm font-weight-bold mb-0 ps-1 text-center"
+                                                style="word-wrap: break-word;  white-space: normal;">
                                                 {{ $data->description }}
                                             </p>
                                         </td>

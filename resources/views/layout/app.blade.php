@@ -36,15 +36,16 @@
     <!-- CSS Files -->
     <link id="pagestyle" href="{{ asset('assets/admin/assets/css/material-dashboard.css?v=3.0.0') }}"
         rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/material-components-web/14.0.0/material-components-web.min.css"
+        rel="stylesheet">
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <!-- DataTables Material Design CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.material.css">
 
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
-    <!-- jQuery -->
-    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- DataTables JS -->
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
 </head>
 
-<body class="g-sidenav-show  bg-gray-200">
+<body class="g-sidenav-show  bg-gray-200" style="overflow: auto">
     @include('inc.sidebar')
     <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
         @include('inc.navbar')
@@ -59,13 +60,8 @@
     <script src="{{ asset('assets/admin/assets/js/plugins/perfect-scrollbar.min.js') }}"></script>
     <script src="{{ asset('assets/admin/assets/js/plugins/smooth-scrollbar.min.js') }}"></script>
     <script src="{{ asset('assets/admin/assets/js/plugins/chartjs.min.js') }}"></script>
+
     <script>
-        $(document).ready(function() {
-            $('#example').DataTable();
-        });
-        $(document).ready(function() {
-            $('#example1').DataTable();
-        });
         var ctx = document.getElementById("chart-bars").getContext("2d");
 
         new Chart(ctx, {
@@ -336,9 +332,19 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="{{ asset('assets/admin/assets/js/material-dashboard.min.js?v=3.0.0') }}"></script>
-    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
-    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/material-components-web/14.0.0/material-components-web.min.js">
+    </script>
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <!-- DataTables Material Design JS -->
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.material.js"></script>
+    <script>
+        $('#example').DataTable();
+        $('#example1').DataTable();
+    </script>
+
 
 </body>
 

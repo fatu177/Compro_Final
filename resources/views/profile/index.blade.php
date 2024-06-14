@@ -31,9 +31,9 @@
                         <img src="{{ asset('images/' . $data->first()->image) }}" class="align-content-center m-3"
                             alt="" width="200px">
                     </div>
-                    <div class="table-responsive p-0">
+                    <div class="table-responsive p-5">
 
-                        <table class="table align-items-center justify-content-center mb-0">
+                        <table class="table table-responsive align-items-center justify-content-center mb-0">
 
                             <thead>
                                 <tr>
@@ -125,8 +125,9 @@
                                                 {{ $data->instagram }}
                                             </p>
                                         </td>
-                                        <td>
-                                            <p class="text-sm font-weight-bold mb-0 ps-1 text-center">
+                                        <td style=" max-width: 30vw;">
+                                            <p class="text-sm font-weight-bold mb-0 ps-1 text-center"
+                                                style="word-wrap: break-word;  white-space: normal;">
                                                 {{ $data->description }}
                                             </p>
                                         </td>
